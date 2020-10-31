@@ -23,7 +23,7 @@ Simple Arch Linux Installation  (according to me )
 #DISK PARTITION 
 6.    fdisk -l
    -> fdisk /dev/sdb              #YOUR PARTITION NAME
-    -> n                          #FOR NEW PARTITION
+   -> n                           #FOR NEW PARTITION
    -> first sector (DEFAULT)      
    -> last sector  (+512M)        #512 MB SPACE FOR EFI PARTITION                        
    -> t                           #TO CHANGE ITS TYPE
@@ -44,10 +44,10 @@ Simple Arch Linux Installation  (according to me )
                                   (PLEASE TRIPE CHECK YOUR PARTITION THEN RUN THIS COMMAND AS THERE IS HIGN CHANGE THAT YOU RUINED YOUR DISK)
                                   
                                   Name 	  Partition 	Size 	        Type
-                                  sdb4 	  /efi  	    512M 	        EFI
-                                  sdb5 	  /           64G 	        ext4
+                                  sdb4 	  /efi  	      512M 	        EFI
+                                  sdb5 	  /            64G 	        ext4
                                   sdb6 	  swap 	      16G 	        swap
-                                  sdb7 	  /home 	(Remaining space) ext4
+                                  sdb7 	  /home 	 (Remaining space)  ext4
                                   
  #FORMAT PARTITION 
  7.  
