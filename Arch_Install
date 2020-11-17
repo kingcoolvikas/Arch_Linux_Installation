@@ -3,7 +3,7 @@ Simple Arch Linux Installation  (according to me )
 
 
 #SET FONT BIGGER
-1. setfont /usr/share/kbd/consolefonts/sun12X22.psfu.gz
+1. setfont /usr/share/kbd/consolefonts/sun12x22.psfu.gz
 
 #CHECK UEFI IS ENABLE OR NOT
 2. ls /sys/firmware/efi/efivars
@@ -89,8 +89,50 @@ Simple Arch Linux Installation  (according to me )
           ::1           localhost
           127.0.1.1     kingcoolvikas.localdomain   kingcoolvikas
           
+       -> passwd
+       -> useradd -G wheel,audio,video -m king
+       -> passwd king
+       -> pacman -S sudo
+       -> EDITOR=nano visudo  (UNCOMMENT ##% wheel All=(All)All)
+       -> pacman -Sy netctl networkmanager dialog dhcpcd wpa_supplicant ifplugd
+       -> pacman -S grub efibootmgr os-prober networkmanager
+       -> grub-install --target=x86_64-efi --efi-directory=/efi/ --bootloader-id=GRUB
+       -> grub-mkconfig -o /boot/grub/grub.cfg
+       -> systemctl enable NetworkManager
+       -> exit
+       
+#UNMOUNT OUR DISK PARTITION       
+12.  
+     -> umount /mnt
+     -> unmount /mnt/home
+     -> umount /mnt/efi
+     -> reboot
+       
+#RESTART AND INSTALL OUR KDE PLASMA
+13.   
+      -> setfont /usr/share/kbd/consolefonts/sun12x22.psfu.gz
+      -> nmtui-connect
+      -> pacman -S xorg plasma plasma-wayland-session kde-applications konsole firefox
+      -> systemctl enable sddm
+      -> reboot
+      
+#YOUR ARCH LINUX IS READY
+14.   ( CREATE READ AND WRITE PERMISSION)
+      -> pacman -S ntfs-3g
+      -> blkid /dev/sda  (COPY UUID OF DRIVE)
+      -> mkdir kingvikas /  (MAKE A DIRECTORY IN ROOT)
+      -> (edit fstab /etc/fstab)
+      
+      UUID=################  >>  /kingvikas  >>  ntfs-3g  >>  defaults  >>  0 2  
+      
+      
+15.   
+      -> install yay, yaourt,git etc
+      
+      
+      
+      
           
-          ((( INCOMPLETE  )))
         
       
       
