@@ -125,6 +125,7 @@ Simple Arch Linux Installation  (according to me )
       
       UUID=################  >>  /kingvikas  >>  ntfs-3g  >>  defaults  >>  0 2  
       
+      (PLEASE NOTE: DISABLE YOUR WINDOWS 10 FAST BOOT TO ENABLE READ WRITE PERMISSION REGULARLY)
       
 15.   
       -> install yay, yaourt,git etc
