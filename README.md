@@ -1,5 +1,5 @@
 # Arch Linux Installation
-
+***
 ## Simple Arch Linux Installation  (according to me )
 
 **SET FONT BIGGER**
@@ -126,6 +126,8 @@
 
 **INSTALL YOUR ADDITIONAL PACKAGES**   
 * install yay, yaourt,git etc
+
+_Author : Vikas Anand_
       
       
       
