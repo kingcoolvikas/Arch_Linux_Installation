@@ -1,26 +1,26 @@
 # Arch Linux Installation
 
-**Simple Arch Linux Installation  (according to me )** 
+## Simple Arch Linux Installation  (according to me )
 
- SET FONT BIGGER
+**SET FONT BIGGER**
 * setfont /usr/share/kbd/consolefonts/sun12x22.psfu.gz
 
- CHECK UEFI IS ENABLE OR NOT
+**CHECK UEFI IS ENABLE OR NOT**
 * ls /sys/firmware/efi/efivars
 
-## CHECK WIFI ROUTER IS SHOWN OR NOT
+**CHECK WIFI ROUTER IS SHOWN OR NOT**
 * ip link
 
-## CONNECT USING WIFI
+**CONNECT USING WIFI**
 * iwctl
 * station wlan0 connect "POCO M2 PRO"
 * (enter password of your SSID)
 * exit
 
-## CHECK INTERNET IS WORKING OR NOT
+**CHECK INTERNET IS WORKING OR NOT**
 * ping -c 4 google.com
 
-## DISK PARTITION 
+**DISK PARTITION**
 *  fdisk -l
 *  fdisk /dev/sdb              
 *  n                           
