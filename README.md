@@ -2,10 +2,10 @@
 
 **Simple Arch Linux Installation  (according to me )** 
 
-## SET FONT BIGGER
+ SET FONT BIGGER
 * setfont /usr/share/kbd/consolefonts/sun12x22.psfu.gz
 
-## CHECK UEFI IS ENABLE OR NOT
+ CHECK UEFI IS ENABLE OR NOT
 * ls /sys/firmware/efi/efivars
 
 ## CHECK WIFI ROUTER IS SHOWN OR NOT
