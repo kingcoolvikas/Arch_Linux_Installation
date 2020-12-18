@@ -2,6 +2,9 @@
 ***
 ## Simple Arch Linux Installation  (according to me )
 
+![sc1](sc1.png)
+![sc2](sc2.png)
+
 **SET FONT BIGGER**
 * setfont /usr/share/kbd/consolefonts/sun12x22.psfu.gz
 
