@@ -1,6 +1,8 @@
 # Arch Linux Installation
-***
-## Simple Arch Linux Installation  (according to me )
+
+_Author : Vikas Anand_
+
+## Simple Arch Linux Installation  (According To Me )
 
 ![sc1](sc1.png)
 ![sc2](sc2.png)
@@ -129,10 +131,9 @@
       
 * **(PLEASE NOTE: DISABLE YOUR WINDOWS 10 FAST BOOT TO ENABLE READ WRITE PERMISSION REGULARLY)**
 
-### INSTALL ADDITIONAL PACKAGES OF ARCH LINUX**   
+### INSTALL ADDITIONAL PACKAGES OF ARCH LINUX
 * install yay, yaourt,git etc
 
-_Author : Vikas Anand_
       
       
       
