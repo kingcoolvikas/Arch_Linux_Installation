@@ -5,6 +5,8 @@
 ![sc1](sc1.png)
 ![sc2](sc2.png)
 
+## INSTALLATION
+
 **SET FONT BIGGER**
 * setfont /usr/share/kbd/consolefonts/sun12x22.psfu.gz
 
@@ -16,7 +18,7 @@
 
 **CONNECT USING WIFI**
 * iwctl
-* station wlan0 connect "POCO M2 PRO"
+* station wlan0 connect "(Your Wi-Fi SSID)"
 * (enter password of your SSID)
 * exit
 
@@ -24,26 +26,26 @@
 * ping -c 4 google.com
 
 **DISK PARTITION**
-* fdisk -l
-* fdisk /dev/sdb              
-* n                           
+* fdisk -l  (List Down Partiton)
+* fdisk /dev/sdb or /dev/sda  (Get Into the Partition)            
+* n  (add a new partition)                          
 * first sector (DEFAULT)      
 * last sector  (+512M)                               
-* t                          
-* set 1                       
-* n                           
+* t  (change a partition type)                        
+* set 1   (Here 1 Stands for EFI SYSTEM, Press L to list down all available partition)               
+* n  (add a new partition)                        
 * first sector (DEFAULT)
 * last sector  (+40G)         
-* n                           
+* n  (add a new partition)                         
 * first sector (DEFAULT)
 * last sector  (+50G)         
-* n                           
+* n  (add a new partition)                         
 * first sector (DEFAULT)
 * last sector  (DEFAULT)
-* t                           
-* set 19                      
-* p                          
-* w                            
+* t  (change a partition type)                        
+* set 19   (Here 19 Stands for LINUX SWAP, Press L to list down all available partition)                   
+* p  (print the partition table)                        
+* w  (write table to disk and exit)                          
 *  **(PLEASE TRIPE CHECK YOUR PARTITION THEN RUN THIS COMMAND AS THERE IS HIGN CHANGE THAT YOU RUINED YOUR DISK)**
 
 |Name|Partition|Size|Type|
@@ -83,18 +85,18 @@
 * timedatectl status
 * hwclock --systohc
 * date
-* echo kingcoolvikas > /etc/hostname
-* nano /etc/hosts
+* echo "Your Hostname" > /etc/hostname
+* nano /etc/hosts, Add the Following hosts
 
 |IP       |HOSTNAME | |
 |---------|---------|-|
 |127.0.0.1|localhost| |
 |::1      |localhost| |
-|127.0.1.1|kingcoolvikas.localdomain|kingcoolvikas|
+|127.0.1.1|"Your Hostname".localdomain|"Your Hostname"|
 
 * passwd
-* useradd -G wheel,audio,video -m king
-* passwd king
+* useradd -G wheel,audio,video -m "any user"
+* passwd "any user"
 * pacman -S sudo
 * EDITOR=nano visudo  (UNCOMMENT ##% wheel All=(All)All)
 * pacman -Sy netctl networkmanager dialog dhcpcd wpa_supplicant ifplugd
@@ -121,13 +123,13 @@
 * (CREATE READ AND WRITE PERMISSION)
 * pacman -S ntfs-3g
 * blkid /dev/sda  (COPY UUID OF DRIVE)
-* mkdir kingvikas /  (MAKE A DIRECTORY IN ROOT)
+* mkdir "Your Hostname" /  (MAKE A DIRECTORY IN ROOT)
 * (edit fstab /etc/fstab)
-* UUID=################  >>  /kingvikas  >>  ntfs-3g  >>  defaults  >>  0 2  
+* UUID=################  >>  /"Your Hostname"  >>  ntfs-3g  >>  defaults  >>  0 2  
       
 * **(PLEASE NOTE: DISABLE YOUR WINDOWS 10 FAST BOOT TO ENABLE READ WRITE PERMISSION REGULARLY)**
 
-**INSTALL YOUR ADDITIONAL PACKAGES**   
+### INSTALL ADDITIONAL PACKAGES OF ARCH LINUX**   
 * install yay, yaourt,git etc
 
 _Author : Vikas Anand_
